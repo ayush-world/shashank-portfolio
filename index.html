@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashank Tiwari – Legal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ff',
+            secondary: '#0f0',
+          },
+          keyframes: {
+            glow: {
+              '0%, 100%': { boxShadow: '0 0 10px #0ff' },
+              '50%': { boxShadow: '0 0 20px #0ff' }
+            }
+          },
+          animation: {
+            glow: 'glow 2s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+  .bg-stripes {
+    background-size: 80px 80px;
+    background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.05) 75%,
+      transparent 75%,
+      transparent
+    );
+  }
+
+  .pattern-dots-slate-700 {
+    background-color: #0e0e0e;
+  }
+</style>
+
+<!-- Google Fonts for Signature -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+
+<style>
+  .font-signature {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-hindi {
+    font-family: 'Tiro Devanagari Hindi', serif;
+  }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0px); opacity: 0.9; }
+    50% { transform: translateY(-6px); opacity: 1; }
+  }
+
+  .animate-floaty {
+    animation: floaty 4s ease-in-out infinite;
+  }
+</style>
+
+<style>
+  @keyframes slow-rotate {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .chakra-float {
+    animation: slow-rotate 20s linear infinite;
+    opacity: 0.25;
+    filter: blur(0.3px) drop-shadow(0 0 3px #38bdf8);
+    pointer-events: none;
+    z-index: 5;
+  }
+</style>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-500">
+<body>
+
+  <!-- 🔷 Glowing Navbar START -->
+  <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-90 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- Left: Logo -->
+      <a href="index.html" class="text-xl font-bold text-cyan-400 animate-glow">
+        Advocate Shashank Tiwari
+      </a>
+
+      <!-- Right: Navigation Links -->
+      <ul class="flex gap-6 text-sm md:text-base font-medium">
+        <li><a href="index.html" class="text-gray-300 hover:text-white hover:font-bold hover:scale-105 transition-all duration-200">Home</a></li>
+        <li><a href="about.html" class="text-gray-300 hover:text-white hover:font-bold hover:scale-105 transition-all duration-200">About</a></li>
+        <li><a href="experience.html" class="text-gray-300 hover:text-white hover:font-bold hover:scale-105 transition-all duration-200">Experience</a></li>
+        <li><a href="certifications.html" class="text-gray-300 hover:text-white hover:font-bold hover:scale-105 transition-all duration-200">Certifications</a></li>
+        <li><a href="moots.html" class="text-gray-300 hover:text-white hover:font-bold hover:scale-105 transition-all duration-200">Moots</a></li>
+        <li><a href="contact.html" class="text-gray-300 hover:text-white hover:font-bold hover:scale-105 transition-all duration-200">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- 🔷 Glowing Navbar END -->
+
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-800 shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-primary animate-glow">Advocate Shashank Tiwari</h1>
+      <div class="space-x-4 text-sm">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <a href="about.html" class="hover:text-cyan-400">About</a>
+        <a href="experience.html" class="hover:text-cyan-400">Experience</a>
+        <a href="certifications.html" class="hover:text-cyan-400">Certifications</a>
+        <a href="moot.html" class="hover:text-cyan-400">Moots</a>
+        <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+        <button id="themeToggle" class="ml-4 px-2 py-1 bg-gray-300 dark:bg-gray-700 rounded">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Indian Court Background -->
+<section class="relative overflow-hidden pt-32 pb-20 text-center text-white bg-black">
+  
+  <!-- Court Video Background -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-50 blur-[1px] z-0">
+    <source src="assets/indian-court.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Glowing Content on Top -->
+  <div class="relative z-10 flex flex-col items-center">
+    <img src="assets/profile.jpg" alt="Shashank Tiwari"
+         class="w-44 h-44 rounded-full border-4 border-teal-400 animate-glow shadow-xl hover:scale-105 transition-transform mb-4" />
+
+    <h1 class="text-5xl font-extrabold bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-glow drop-shadow-lg">
+      Shashank Tiwari
+    </h1>
+
+    <p class="mt-2 text-lg text-gray-300 max-w-lg">
+      LL.M • Corporate & Commercial Laws • UGC-NET • Legal Intern at Allahabad High Court
+    </p>
+
+    <a href="resume.pdf" download="Shashank_Tiwari_Resume.pdf"
+       class="mt-6 px-8 py-3 bg-gradient-to-r from-cyan-500 to-violet-500 text-white rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+      📄 Download Resume
+    </a>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-900 py-20">
+  <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Left: Text -->
+    <div class="space-y-6">
+      <h2 class="text-4xl font-extrabold text-gray-800 dark:text-white">
+        Corporate & Commercial Law
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300">
+        I’ve interned at Allahabad High Court and helped draft arbitration documentation...
+      </p>
+      <a href="expertise.html"
+         class="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 transition">
+         Explore Experience
+      </a>
+    </div>
+    <!-- Right: Overlapping Image Card -->
+    <div class="relative">
+      <img src="assets/courtroom.jpg" alt="" class="rounded-lg shadow-xl transform hover:-translate-y-2 transition">
+      <div class="absolute bottom-0 right-0 bg-white dark:bg-gray-800 p-4 rounded-tr-lg rounded-bl-lg shadow-lg max-w-sm">
+        <h3 class="font-bold text-lg dark:text-white">Key Moot Achievements</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          International Aerospace Law | Civil & Criminal Moots
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white dark:bg-gray-800">
+  <div class="container mx-auto">
+    <h3 class="text-3xl font-bold text-center dark:text-white mb-10">Certifications & Events</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Sample Card -->
+      <div class="bg-white dark:bg-gray-700 rounded-lg shadow hover:shadow-xl transition">
+        <img src="assets/cert1.jpg" alt="" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h4 class="font-semibold dark:text-white">UGC-NET Dec 2023</h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Qualified on first attempt with high percentile...
+          </p>
+        </div>
+      </div>
+      <!-- Repeat as needed -->
+    </div>
+  </div>
+</section>
+<!-- ✨ Glowing About Section with Khaitan-Inspired Layout -->
+<section class="bg-gray-50 dark:bg-gray-900 py-20 reveal">
+  <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center px-6">
+
+    <!-- Left: Glowing Heading & Text -->
+    <div class="space-y-6 text-center lg:text-left">
+      <h2 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
+        Corporate & Commercial Law
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto lg:mx-0 mb-4"></div>
+      
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+        I'm a dedicated legal professional with a specialization in Corporate and Commercial Law. Having interned at the Allahabad High Court and participated in multiple moot courts, I offer a sharp legal mindset blended with hands-on research experience.
+      </p>
+
+      <a href="experience.html"
+         class="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300">
+         📚 Explore Experience
+      </a>
+    </div>
+
+    <!-- Right: Floating Card Image Block -->
+    <div class="relative">
+      <img src="assets/courtroom.jpeg" alt="Courtroom"
+     class="rounded-xl shadow-2xl transform hover:-translate-y-2 transition duration-500" />
+
+
+      <div class="absolute bottom-0 right-0 bg-white/30 dark:bg-white/10 backdrop-blur-md p-5 rounded-tr-xl rounded-bl-xl border border-white/20 shadow-xl max-w-xs">
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Key Highlights</h3>
+        <ul class="text-sm text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+          <li>⚖️ Moot Court: Criminal & Civil Law</li>
+          <li>🧾 Research Intern - High Court of Allahabad</li>
+          <li>🎓 Qualified UGC-NET (Dec 2023)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white dark:bg-gray-800 reveal">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-extrabold text-center text-gray-800 dark:text-white mb-2">
+      Certifications & Internships
+    </h3>
+    <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-10"></div>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Card 1: Govt Advocate Internship -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition border border-transparent hover:border-cyan-400">
+        <img src="assets/cert1.jpg" alt="Internship Govt Advocate" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-5">
+          <h4 class="font-bold text-lg text-gray-800 dark:text-white">Internship – Government Advocate Office</h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            High Court, Allahabad | Jan 25 – Feb 20, 2023<br>
+            Observed court proceedings under Shri N.K. Verma (AGA-I); learned litigation and case management.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: International Conference -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition border border-transparent hover:border-cyan-400">
+        <img src="assets/cert2.jpg" alt="International Conference" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-5">
+          <h4 class="font-bold text-lg text-gray-800 dark:text-white">International Conference – NUJS Kolkata</h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            March 30, 2024<br>
+            Participated in a global conference on “Aerodrome Requirements” with focus on aviation law.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Anoop Trivedi Internship -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition border border-transparent hover:border-cyan-400">
+        <img src="assets/cert3.jpg" alt="Internship Anoop Trivedi" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-5">
+          <h4 class="font-bold text-lg text-gray-800 dark:text-white">Internship – Senior Adv. Anoop Trivedi</h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            High Court, Allahabad | May 1 – July 5, 2023<br>
+            Hands-on experience in CrPC, Constitution, Companies Act, IBC & writ drafting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4: Supreme Court Value-Added Course -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition border border-transparent hover:border-cyan-400">
+        <img src="assets/cert4.jpg" alt="Supreme Court Course" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-5">
+          <h4 class="font-bold text-lg text-gray-800 dark:text-white">Value-Added Course – Supreme Court Practice</h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            NUJS | 16 Hours | 2023–2024<br>
+            Advanced legal frameworks and court conduct with a certified program at NUJS.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5: UGC-NET Certificate -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition border border-transparent hover:border-cyan-400">
+        <img src="assets/cert5.jpg" alt="UGC-NET Certificate" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-5">
+          <h4 class="font-bold text-lg text-gray-800 dark:text-white">UGC-NET Certificate – Law</h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+            Exam Date: Dec 14, 2023 | Cert: Feb 26, 2024<br>
+            Qualified UGC-NET (Law) for Assistant Professor eligibility under NTA-UGC.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    © 2025 Shashank Tiwari. All rights reserved.
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.onclick = () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    };
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <!-- Custom Cursor Elements -->
+<div id="cursor" class="fixed top-0 left-0 w-5 h-5 bg-cyan-400 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 mix-blend-screen opacity-80 transition-transform duration-100"></div>
+
+<script>
+// Cursor Animation
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+// Scale up on clickable elements
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseover', () => cursor.classList.add('scale-150'));
+  el.addEventListener('mouseout', () => cursor.classList.remove('scale-150'));
+});
+</script>
+<script>
+  // Scroll animation
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const scrollObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("opacity-100", "translate-y-0");
+        entry.target.classList.remove("opacity-0", "translate-y-8");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => {
+    el.classList.add("opacity-0", "translate-y-8", "transition-all", "duration-700");
+    scrollObserver.observe(el);
+  });
+</script>
+
+<!-- Floating Glowing Signature -->
+<div class="fixed bottom-4 right-6 z-10 text-right opacity-90 pointer-events-none select-none">
+  <p class="text-3xl font-signature text-cyan-300 animate-floaty drop-shadow-lg">
+    Shashank Tiwari
+  </p>
+  <p class="text-xl font-hindi text-indigo-300 italic animate-floaty drop-shadow">
+    शशांक तिवारी
+  </p>
+</div>
+
+<!-- 🌀 Floating Ashoka Chakra -->
+<img src="assets/chakra.png"
+     alt="Ashoka Chakra"
+     class="fixed bottom-6 left-6 w-20 h-20 chakra-float" />
+
+</body>
+</html>

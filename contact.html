@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Shashank Tiwari</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          keyframes: {
+            glow: {
+              '0%, 100%': { boxShadow: '0 0 10px #0ff' },
+              '50%': { boxShadow: '0 0 20px #0ff' },
+            }
+          },
+          animation: {
+            glow: 'glow 2s ease-in-out infinite',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white transition-all duration-500">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-800 shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="text-xl font-bold text-cyan-400 animate-glow">Advocate Shashank Tiwari</a>
+      <div class="space-x-4 text-sm">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <a href="about.html" class="hover:text-cyan-400">About</a>
+        <a href="experience.html" class="hover:text-cyan-400">Experience</a>
+        <a href="certifications.html" class="hover:text-cyan-400">Certifications</a>
+        <a href="moot.html" class="hover:text-cyan-400">Moots</a>
+        <a href="contact.html" class="text-cyan-400 font-semibold underline">Contact</a>
+        <button id="themeToggle" class="ml-4 px-2 py-1 bg-gray-300 dark:bg-gray-700 rounded">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="pt-32 px-6 max-w-2xl mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-6 text-cyan-400 animate-glow">Get in Touch</h1>
+    <p class="text-lg mb-4">Feel free to reach out for any collaboration, legal queries, or professional opportunities.</p>
+
+    <div class="text-left text-lg mt-8 space-y-4">
+      <p><strong>Email:</strong> <a href="mailto:llm015223@nujs.edu" class="text-cyan-400 hover:underline">llm015223@nujs.edu</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919123033622" class="text-cyan-400 hover:underline">+91 91230 33622</a></p>
+      <p><strong>Location:</strong> Kolkata, India</p>
+    </div>
+
+    <div class="mt-12">
+      <a href="resume.pdf" download="Shashank_Tiwari_Resume.pdf"
+         class="bg-teal-500 text-white px-6 py-3 rounded shadow-lg hover:bg-teal-600 transition">
+        📄 Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-16">
+    © 2025 Shashank Tiwari. All rights reserved.
+  </footer>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    btn.onclick = () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    };
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</body>
+</html>

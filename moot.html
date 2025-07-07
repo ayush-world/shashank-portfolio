@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moots & Seminars – Shashank Tiwari</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          keyframes: {
+            glow: {
+              '0%, 100%': { boxShadow: '0 0 10px #0ff' },
+              '50%': { boxShadow: '0 0 20px #0ff' },
+            }
+          },
+          animation: {
+            glow: 'glow 2s ease-in-out infinite',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white transition-all duration-500">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-800 shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="text-xl font-bold text-cyan-400 animate-glow">Advocate Shashank Tiwari</a>
+      <div class="space-x-4 text-sm">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <a href="about.html" class="hover:text-cyan-400">About</a>
+        <a href="experience.html" class="hover:text-cyan-400">Experience</a>
+        <a href="certifications.html" class="hover:text-cyan-400">Certifications</a>
+        <a href="moot.html" class="text-cyan-400 font-semibold underline">Moots</a>
+        <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+        <button id="themeToggle" class="ml-4 px-2 py-1 bg-gray-300 dark:bg-gray-700 rounded">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="pt-32 px-6 max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-6 text-cyan-400 animate-glow">Moot Court, Seminars & Workshops</h1>
+
+    <div class="text-left text-lg space-y-6">
+      <div>
+        <h2 class="text-2xl font-semibold text-teal-400">🏛 Moot Court Experience</h2>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>Participated in Intra-College Moot Court Competitions (Civil & Criminal Law)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-teal-400 mt-8">🎓 Seminars & Conferences</h2>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>International Conference on Aerospace Requirements: Legal and Development Perspectives</li>
+          <li>2-Day International Colloquium on Legal Reforms in BIMSTEC Member States</li>
+          <li>Workshop on Samridhi – Vocal for Local at WBNUJS Kolkata</li>
+          <li>Awareness Programme on Safe Migration to End Labour Trafficking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-16">
+    © 2025 Shashank Tiwari. All rights reserved.
+  </footer>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    btn.onclick = () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    };
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</body>
+</html>
